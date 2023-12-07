@@ -12,7 +12,7 @@ root.render(
     
     <h2>Random picture:</h2>
     <div>
-      <img src="https://picsum.photos/200"></img>
+      <img src="https://picsum.photos/200" />
     </div>
     <p>© {new Date().getFullYear()}</p>
   </div>
