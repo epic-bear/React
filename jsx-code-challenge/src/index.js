@@ -9,6 +9,11 @@ root.render(
   <div>
     <h1>Hello {name}</h1>
     <h2>Your lucky number is {number}</h2>
+    
+    <h2>Random picture:</h2>
+    <div>
+      <img src="https://picsum.photos/200"></img>
+    </div>
     <p>© {new Date().getFullYear()}</p>
   </div>
 );
