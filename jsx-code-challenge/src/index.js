@@ -1,9 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<div>
-  <h1>Hello React</h1>
-  <p>This is a paragraph.</p>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <div>
+    <h1>Hello React</h1>
+    <ul>
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Orange</li>
+    </ul>
   </div>
 );
