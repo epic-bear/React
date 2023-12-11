@@ -23,7 +23,7 @@ var notes = [
 ]
 
 function createNote(note) {
-   return <Note title={note.title} content={note.content}/>
+   return <Note key={note.id} title={note.title} content={note.content}/>
 }
 
 function App() {
