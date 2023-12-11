@@ -4,7 +4,7 @@ import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 
-const notes = [
+var notes = [
     {
         title: "title1",
         content: "text"
@@ -18,13 +18,16 @@ const notes = [
         content: "text"
     }
 ]
+
+function createNote(note) {
+   return <Note title={note.title} content={note.content}/>
+}
+
 function App() {
   return (
     <div>
       <Header />
-      <Note title={notes[0].title} content={notes[0].content}/>
-      <Note title={notes[1].title} content={notes[1].content}/>
-      <Note title={notes[2].title} content={notes[2].content}/>
+      {notes.map(createNote)}
       <Footer />
     </div>
   );
