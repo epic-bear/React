@@ -3,24 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
-
-var notes = [
-    { 
-        id: 1,
-        title: "title1",
-        content: "text"
-    },
-    {   
-        id: 2,
-        title: "title2",
-        content: "text"
-    },
-    {   
-        id: 3,
-        title: "title3",
-        content: "text"
-    }
-]
+import notes from "../notes";
 
 function createNote(note) {
    return <Note key={note.id} title={note.title} content={note.content}/>
