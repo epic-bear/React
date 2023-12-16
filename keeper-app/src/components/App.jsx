@@ -10,6 +10,9 @@ function createNote(note) {
 }
 
 function App() {
+  
+  setInterval(getTime, 1000);
+
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   function getTime() {
@@ -21,7 +24,6 @@ function App() {
       <Header />
       <div>
         <h1 style={{color: "crimson"}}>{time}</h1>
-        <button onClick={getTime}>Get Time</button>
       </div>
       {notes.map(createNote)}
       <Footer />
