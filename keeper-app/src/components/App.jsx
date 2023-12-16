@@ -20,7 +20,7 @@ function App() {
     <div>
       <Header />
       <div>
-        <h1>{time}</h1>
+        <h1 style={{color: "crimson"}}>{time}</h1>
         <button onClick={getTime}>Get Time</button>
       </div>
       {notes.map(createNote)}
