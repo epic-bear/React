@@ -12,10 +12,15 @@ function createNote(note) {
 
 function App() {
   
+  function addNote(note) {
+
+  }
+
   return (
     <div>
       <Header />
-      <CreateArea/>
+      <CreateArea onAdd={addNote}
+      />
       {notes.map(createNote)}
       <Footer />
     </div>

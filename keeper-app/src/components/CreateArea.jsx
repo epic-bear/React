@@ -18,6 +18,7 @@ function CreateArea(props) {
   }
 
   function handleClick(event) {
+    props.onAdd(newNote);
     event.preventDefault();
   }
 
