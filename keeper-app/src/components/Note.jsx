@@ -19,6 +19,7 @@ function handleMouseOut() {
     >
       <h2>{props.title}</h2>
       <p>{props.content}</p>
+      <button>Delete</button>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Note from "./Note";
+import CreateArea from "./CreateArea";
 import Footer from "./Footer";
 import notes from "../notes";
 
@@ -11,20 +12,10 @@ function createNote(note) {
 
 function App() {
   
-  setInterval(getTime, 1000);
-
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
-
-  function getTime() {
-    setTime(new Date().toLocaleTimeString());
-  }
-
   return (
     <div>
       <Header />
-      <div>
-        <h1 style={{color: "crimson"}}>{time}</h1>
-      </div>
+      <CreateArea/>
       {notes.map(createNote)}
       <Footer />
     </div>

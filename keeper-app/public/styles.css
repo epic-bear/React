@@ -39,6 +39,17 @@ h1 {
     white-space:  pre-wrap;
     word-wrap: break-word;
 }
+
+.createArea {
+    background: azure;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+}
+
 footer {
    position: absolute;
    text-align: center;
