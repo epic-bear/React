@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function CreateArea(props) {
   const [newNote, setNote] = useState({
     title: "",
-    text: ""
+    text: "",
   });
 
   function handleChange(event) {
@@ -15,6 +15,10 @@ function CreateArea(props) {
         [name]: value,
       };
     });
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
   }
 
   return (
@@ -33,7 +37,7 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <button>Add</button>
+        <button onClick={handleClick}>Add</button>
       </form>
     </div>
   );
