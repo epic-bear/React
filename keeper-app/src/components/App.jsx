@@ -7,13 +7,16 @@ import Footer from "./Footer";
 import notes from "../notes";
 
 function createNote(note) {
-  return <Note key={note.id} title={note.title} content={note.content} />;
+  return <Note key={note.id} title={note.title} content={note.text} />;
 }
 
 function App() {
-  
-  function addNote(note) {
+  const [notes, setNotes] = useState([]);
 
+  function addNote(note) {
+         setNotes(prevNotes => {
+        return  [...prevNotes, note];
+         })
   }
 
   return (
