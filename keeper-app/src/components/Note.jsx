@@ -17,7 +17,7 @@ function handleClick() {
 
   return (
     <div 
-    style={{backgroundColor: isMouseOver ? "#f5ba13" : "white"}} className="note"
+    style={{backgroundColor: isMouseOver ? "orange" : "white"}} className="note"
     onMouseOver={handleMouseOver}
     onMouseOut={handleMouseOut}
     >
