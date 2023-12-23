@@ -6,9 +6,7 @@ import CreateArea from "./CreateArea";
 import Footer from "./Footer";
 import notes from "../notes";
 
-function createNote(note) {
-  return <Note key={note.id} title={note.title} content={note.text} />;
-}
+
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -19,12 +17,23 @@ function App() {
          })
   }
 
+  function deleteNote(id) {
+    setNotes(prevNotes => {
+      return prevNotes.filter((note, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <CreateArea onAdd={addNote}
       />
-      {notes.map(createNote)}
+      {notes.map((note, index) => {
+        return <Note key={index} id={index} title={note.title} content={note.text} onDelete={deleteNote}/>;
+      })
+      }
       <Footer />
     </div>
   );

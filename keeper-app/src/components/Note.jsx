@@ -11,6 +11,10 @@ function handleMouseOut() {
   setMouseOver(false);
 }
 
+function handleClick() {
+  props.onDelete(props.id);
+}
+
   return (
     <div 
     style={{backgroundColor: isMouseOver ? "orange" : "white"}} className="note"
@@ -19,7 +23,7 @@ function handleMouseOut() {
     >
       <h2>{props.title}</h2>
       <p>{props.content}</p>
-      <button>Delete</button>
+      <button onClick={handleClick}>Delete</button>
     </div>
   );
 }
